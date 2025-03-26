@@ -1,0 +1,11 @@
+.gradient-heading {
+  @apply bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent;
+}
+
+.gradient-border {
+  @apply border border-transparent bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-border;
+}
+
+.hover-gradient {
+  @apply transition-all duration-300 hover:bg-gradient-to-r hover:from-primary hover:via-purple-500 hover:to-pink-500;
+} 

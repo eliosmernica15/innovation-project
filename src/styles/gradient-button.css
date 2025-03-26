@@ -1,0 +1,20 @@
+.gradient-button {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #4F46E5 0%, #7C3AED 100%);
+  transition: all 0.3s ease;
+}
+
+.gradient-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.gradient-button-variant {
+  background: linear-gradient(90deg, #6366F1 0%, #EC4899 100%);
+}
+
+.gradient-button-variant:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+} 

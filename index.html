@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Innovation Academy - Transforming Education For The Future</title>
+    <meta name="description" content="Innovation Academy offers cutting-edge educational programs designed to prepare students for the challenges of tomorrow." />
+    <meta name="author" content="Innovation Academy" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      #loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Inter, sans-serif;
+      }
+      #error {
+        display: none;
+        padding: 20px;
+        text-align: center;
+        color: #dc2626;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <noscript>You need to enable JavaScript to run this app.</noscript>
+      <div id="loading">Loading...</div>
+      <div id="error"></div>
+    </div>
+    <script>
+      // Error handling
+      window.addEventListener('error', function(e) {
+        console.error('Global error:', e.error);
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('error').style.display = 'block';
+        document.getElementById('error').innerHTML = `Error: ${e.error?.message || 'Unknown error'}<br>Please check the console for details.`;
+      });
+
+      // Script load error handling
+      window.addEventListener('unhandledrejection', function(e) {
+        console.error('Unhandled promise rejection:', e.reason);
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('error').style.display = 'block';
+        document.getElementById('error').innerHTML = `Promise Error: ${e.reason?.message || 'Unknown error'}<br>Please check the console for details.`;
+      });
+    </script>
+    <script type="module" src="./src/main.tsx"></script>
+  </body>
+</html>
